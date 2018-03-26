@@ -16,4 +16,14 @@ public class BizErrorCode extends SysErrorCode {
 
     public static final int USER_HAD_NOT_LOGINED = 50002;
 
+    /**
+     * 验证码过期
+     */
+    public static final int CAPTCHA_IS_EXPIRED = 50003;
+
+    /**
+     * 验证码错误
+     */
+    public static final int CAPTCHA_IS_WRONG = 50004;
+
 }

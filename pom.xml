@@ -14,7 +14,7 @@
         <swagger.version>2.7.0</swagger.version>
     </properties>
 
-    <name>project name</name>
+    <name>graduation</name>
     <description>project description</description>
     <inceptionYear>${maven.build.timestamp}</inceptionYear>
 
@@ -137,6 +137,16 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.7</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>4.0.7</version>
         </dependency>
     </dependencies>
 

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>emailUrl</title>
+</head>
+<body>
+<div class="emailBox">
+  <div class="content_box">
+      <div class="boxTop">
+        <img src="http://gds-10049437.cossh.myqcloud.com/openapi/resource/Group@2x.png" alt="">
+      </div>
+      <div class="content_position">
+
+            <div class="boxLogo">
+                <div class="iconLogo" >
+                    <img src="http://gds-10049437.cossh.myqcloud.com/openapi/resource/emailLogo.png" alt="">
+                </div>
+            </div>
+            <div class="boxContent">
+                <h2>{title}</h2>
+                <h3>{content}</h3>
+                <div class="jumpUrl"><a href="{redirectUrl}">{redirectUrl}</a></div>
+                <p>如果以上链接无法点击，请将上面的地址复制到你的浏览器(如IE)的地址栏进入</p>
+            </div>
+     </div>
+  </div>
+</div>
+<style type="text/css">
+*{margin: 0;padding: 0;list-style: none; font-family: PingFangSC-Regular,微软雅黑}
+.emailBox {
+  width: 100%;
+  /*position: absolute;*/
+
+  /*height: 100vh;*/
+  padding-bottom: 45px;
+  background: #eeeeee;
+  overflow: hidden;
+}
+.emailBox .content_box {
+  width: 600px;
+  height: 490px;
+  margin: 0 auto;
+  text-align: left;
+  margin-top: 48px;
+  border-bottom: 3px solid #5DBBED;
+  background: #fff;
+}
+.emailBox .content_box .boxTop {
+  overflow: hidden;
+}
+.emailBox .content_box .boxTop img {
+  border: 0;
+  height: 11px;
+}
+.emailBox .content_box .content_position {
+  width: 540px;
+  height: auto;
+  margin: 0 auto;
+}
+.emailBox .content_box .content_position .boxLogo {
+  width: 100%;
+  height: 110px;
+}
+.emailBox .content_box .content_position .boxLogo .iconLogo {
+    font-size: 240px;
+    width: 100%;
+    height: 110px;
+}
+.boxLogo .iconLogo  img{
+    width: 240px;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: -15px;
+}
+.emailBox .content_box .content_position .boxContent {
+  width: 100%;
+  height: auto;
+  letter-spacing: -0.29px;
+  line-height: 20px;
+  color: #4A4A4A;
+  margin-top: 55px;
+}
+.emailBox .content_box .content_position .boxContent h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+.emailBox .content_box .content_position .boxContent h3 {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 12px;
+}
+.emailBox .content_box .content_position .boxContent .jumpUrl {
+  font-size: 14px;
+  color: #5DBBED;
+  margin-bottom: 18px;
+  width: 100%;
+  word-wrap: break-word;
+  line-height: 25px;
+}
+.emailBox .content_box .content_position .boxContent p {
+  font-size: 14px;
+  color: #999999;
+}
+
+</style>
+</body>
+</html>
