@@ -61,7 +61,6 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
         converters.add(converter);
     }
 
-
     /**
      * 统一异常处理
      */
@@ -120,7 +119,8 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
      */
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**");
+        registry.addMapping("/**")
+                .allowedHeaders("*") .allowedMethods("*") .allowedOrigins("*");
     }
 
     /**

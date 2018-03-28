@@ -17,10 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
@@ -52,13 +49,12 @@ public class EmailController {
      * 读取html模板文件
      */
     static {
-        URL url =  EmailController.class.getClassLoader().getResource("email/index.html");
-        String emailFilePath = url.getPath();
+        InputStream in =  EmailController.class.getClassLoader().getResourceAsStream("email/index.html");
         StringBuffer stringBuffer = new StringBuffer();
         BufferedReader bufferedReader = null;
         String line;
         try {
-           bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(emailFilePath),"UTF-8"));
+           bufferedReader = new BufferedReader(new InputStreamReader(in));
             while ((line = bufferedReader.readLine()) != null) {
                 stringBuffer.append(line);
             }

@@ -46,7 +46,7 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
         User query = new User();
         query.setEmail(user.getEmail());
         String uuid;
-        if (userMapper.select(query) != null) {
+        if (userMapper.select(query).size() > 0) {
             throw new ServiceException(BizErrorCode.USER_HAS_EXISTED);
         } else {
             uuid = UUIDGenerator.uuid();
